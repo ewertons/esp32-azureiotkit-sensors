@@ -38,17 +38,17 @@ void loop() {
 
       int pitch, roll, accelX, accelY, accelZ;
       esp32_azureiotkit_get_pitch_roll_accel(&pitch, &roll, &accelX, &accelY, &accelZ);
-      printf("pitch=%f\r\n", pitch);
-      printf("roll=%f\r\n", roll);
-      printf("acceleration X=%f\r\n", accelX);
-      printf("acceleration Y=%f\r\n", accelY);
-      printf("acceleration Z=%f\r\n", accelZ);
+      printf("pitch=%d\r\n", pitch);
+      printf("roll=%d\r\n", roll);
+      printf("acceleration X=%d\r\n", accelX);
+      printf("acceleration Y=%d\r\n", accelY);
+      printf("acceleration Z=%d\r\n", accelZ);
 
       int magnetometerX, magnetometerY, magnetometerZ;
       esp32_azureiotkit_get_magnetometer(&magnetometerX, &magnetometerY, &magnetometerZ);
-      printf("magnetometer X=%f T\r\n", magnetometerX);
-      printf("magnetometer Y=%f T\r\n", magnetometerY);
-      printf("magnetometer Z=%f T\r\n", magnetometerZ);
+      printf("magnetometer X=%d T\r\n", magnetometerX);
+      printf("magnetometer Y=%d T\r\n", magnetometerY);
+      printf("magnetometer Z=%d T\r\n", magnetometerZ);
 
       esp32_azureiotkit_led1_set_state(led1_on ? LED_STATE_ON : LED_STATE_OFF);
       esp32_azureiotkit_led2_set_state(led2_on ? LED_STATE_ON : LED_STATE_OFF);
